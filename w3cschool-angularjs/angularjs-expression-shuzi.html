@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>AngularJS 数字</title>
+</head>
+	<body>
+		<div ng-app="" ng-init="quantity = 5;cost=1">
+			<!--<p>
+				总价：{{quantity * cost}}
+			</p>-->
+			
+			<!-- 使用 ng-bind 的相同实例： -->
+			
+			<p>
+				总价：<span ng-bind=" quantity * cost"></span>
+			</p>
+		</div>
+	</body>
+	<script src="angular.min.js"></script>
+</html>
