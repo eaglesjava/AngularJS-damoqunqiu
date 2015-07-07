@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>AngularJS 数组</title>
+	</head>
+	<body>
+		<div ng-app="" ng-init="points=[1,5,23,6,43]">
+			<!--<p>
+				第三个值为：{{points[2]}}
+			</p>-->
+			<!-- 使用 ng-bind 的相同实例： -->
+			<p>
+				第三个值为：<span ng-bind="points[2]"></span>
+			</p>
+		</div>
+	</body>
+	<script src="angular.min.js"></script>
+</html>
