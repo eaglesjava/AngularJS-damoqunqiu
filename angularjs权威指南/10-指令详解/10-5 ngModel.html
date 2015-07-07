@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script>
+		angular.model('myApp')
+		.directive('myDirective',function(){
+			return {
+			require: '?ngModel',
+			link: function(scope, ele, attrs, ngModel) {
+				if (!ngModel) return;
+				// 现在我们的指令中已经有ngModelController的一个实例
+				}
+			};
+		});
+	</script>
+	<script src="angular.js"></script>
+</html>

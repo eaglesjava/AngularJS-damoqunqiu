@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div ng-controller="MyController">
+			<h1>Hello {{ clock }}!</h1>
+		</div>
+		<script type="text/javascript">
+			function MyController($scope) {
+				$scope.clock = new Date();
+				var updateClock = function() {
+					$scope.clock = new Date();
+				};
+				setInterval(function() {
+					$scope.$apply(updateClock);
+				}, 1000);
+				updateClock();
+			};
+		</script>
+		<script src="angular-1.3.0.js "></script>
+	</body>
+
+</html>
