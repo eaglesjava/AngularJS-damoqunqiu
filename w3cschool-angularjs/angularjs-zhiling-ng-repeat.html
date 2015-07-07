@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ng-repeat重复 HTML 元素</title>
+	</head>
+	<body>
+		<!--<div ng-app="" ng-init="names=['Jhoon','Scott','Chars']">
+			<p>使用 ng-repeat 来循环数组</p>
+			<ul>
+				<li ng-repeat="n in names">
+					{{n}}
+				</li>
+			</ul>
+		</div>-->
+		<!--描述：ng-repeat 指令用在一个对象数组上 -->
+        <div ng-app="" ng-init="names=[{name:'Jani',country:'Norway'},{name:'Hege',country:'Sweden'},{name:'Kai',country:'Denmark'}]">
+        	<p>循环对象：</p>
+        	<ul>
+        		<li ng-repeat="x in names">
+        			{{x.name + ',' + x.country}}
+        		</li>
+        	</ul>
+        </div>
+	</body>
+	<script src="angular.min.js"></script>
+</html>
