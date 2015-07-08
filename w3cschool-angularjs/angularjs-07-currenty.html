@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>currency 过滤器</title>
+	</head>
+	<body>
+		<div ng-app="" ng-controller="costController">
+			数量：<input type="number" ng-model="quantity"/><br>
+			价格：<input type="number" ng-model="price" />
+			<p>
+				总价：{{ quantity * price | currency}}
+			</p>
+		</div>
+	</body>
+	<script>
+		function costController($scope){
+			$scope.quantity = 1;
+			$scope.price = 9.99;
+		}
+	</script>
+	<script src="angular.min.js"></script>
+</html>
