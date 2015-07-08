@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>创建一个新的控制器</title>
+	</head>
+	<body>
+		<div ng-app="" ng-controller="namesController">
+			<ul>
+				<li ng-repeat="n in names">
+					{{n.name + "" + n.country}}
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="angularjs-05-xingde-controller.js"></script>
+	<script src="angular.min.js"></script>
+</html>
