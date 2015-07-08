@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>向指令添加过滤器</title>
+	</head>
+	<body>
+		<div ng-app="" ng-controller="namesController">
+			<p>循环对象:</p>
+			<ul>
+				<li ng-repeat="x in names | orderBy:'country'">
+					{{x.name + " " + x.country}}
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script src="angularjs-06-xingde-controller.js"></script>
+	<script src="angular.min.js"></script>
+</html>

@@ -8,7 +8,13 @@ function namesController($scope) {
 		country: 'Sweden'
 	}, {
 		name: 'Kai',
-		country: 'Denmark'
+		country: 'shanghai'
+	}, {
+		name: 'Scott',
+		country: 'beijing'
+	}, {
+		name: 'Jhoon',
+		country: 'guangzhou'
 	}];
 
 }
