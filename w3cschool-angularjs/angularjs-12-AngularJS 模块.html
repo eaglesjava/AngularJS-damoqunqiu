@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>AngularJS 模块实例</title>
+		<!--
+    	描述：模块定义应放置在何处？
+			对于 HTML 应用程序，通常建议把所有的脚本都放置在 <body> 元素的最底部。
+			这会提高网页加载速度，因为 HTML 加载不受制于脚本加载。
+			
+			在上面的多个 AngularJS 实例中，您将看到 AngularJS 库是在文档的 <head> 区域被加载。
+			在上面的实例中，AngularJS 在 <head> 元素中被加载，因为对 angular.module 的调用只能在库加载完成后才能进行。
+			另一个解决方案是在 <body> 元素中加载 AngularJS 库，但是必须放置在您的 AngularJS 脚本前面：
+        -->
+	</head>
+	<body>
+		<div ng-app="myApp" ng-controller="myCtrl">
+			{{firstName + " " + lastName}}
+		</div>
+	</body>
+	<script src="angular.min.js"></script>
+	
+	<script src="myApp.js"></script>
+	<script src="myCtrl.js"></script>
+	
+</html>
