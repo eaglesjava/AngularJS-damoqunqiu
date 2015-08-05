@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<title>定位组件Web组件 API</title>
+		<script src="http://api.map.baidu.com/components?ak=PrSCXihdj65VMq9pxUXychRG&v=1.0"></script>
+	</head>
+
+	<body>
+		<lbs-geo id="geo" city="上海" enable-modified="true"></lbs-geo>
+	</body>
+	<script>
+		// 先获取元素
+		var lbsGeo = document.getElementById('geo');
+		//监听定位失败事件 geofail	
+		lbsGeo.addEventListener("geofail", function(evt) {
+			console.log("fail");
+		});
+		//监听定位成功事件 geosuccess
+		lbsGeo.addEventListener("geosuccess", function(evt) {
+			console.log(evt.detail);
+			var address = evt.detail.address;
+			var coords = evt.detail.coords;
+			var x = coords.lng;
+			var y = coords.lat;
+			console.log("地址：" + address);
+			console.log("地理坐标：" + x + ',' + y);
+		});
+	</script>
+
+</html>
